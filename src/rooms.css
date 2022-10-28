@@ -1,0 +1,29 @@
+.roomCon{
+    width: 50%;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.814);
+    margin: 30px;
+
+}
+.pStatus{
+    display: block;
+}
+.roomCon h3 {
+    text-align: center;
+    width: 20%;
+    color: red;
+    font-size: 70%;
+    font-weight: 60rem;
+    background-color: bisque;
+    height: fit-content;
+    border-radius: 10%;
+}
+.roomCon h2{
+    font-size: 130%;
+}
+.roomCon img{
+    width: 50%;
+}
+roomItem {
+    display: flexbox;
+}

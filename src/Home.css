@@ -1,0 +1,25 @@
+.con-con{
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.674);
+    margin-top: 40px;
+    width: 80%;
+    height: 50%;
+}
+hr{
+    margin: auto;
+    width: 80%;
+}
+
+.con-con h1{
+    color: wheat;
+    font-weight: 100;
+}
+.con-con h2{
+    text-align: center;
+    color: white;
+    margin: 10px;
+    font-weight: 100;
+    
+
+
+}
