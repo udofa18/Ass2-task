@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import "./App.css";
 import Home from "./Home";
 import AboutUs from "./AboutUs";
@@ -10,7 +9,7 @@ import Room1 from "./Room1";
 import { Route, Routes, Link, useNavigate } from "react-router-dom";
 import { ErrorBoundary } from "react-error-boundary";
 import { Suspense } from "react";
-import useFetch from "./useFetch";
+
 
 const ErrorFallback = ({ error, resetErrorBoundary }) => {
   return (
@@ -23,52 +22,26 @@ const ErrorFallback = ({ error, resetErrorBoundary }) => {
 
 const App = () => {
   const navigate = useNavigate();
-  const [data, setData] = useState([]);
-
-  const { isLoading, error, fetchRequest } = useFetch();
 
   
-
-  useEffect(() => {
-    const getData = (data) => {
-      setData(data);
-    };
-
 // useEffect(()=>{
-    const fetchRequest =  async () =>{
-      const response = await fetch (
-       " https://randomuser.me/api/1.4?results=50"
-      );
-      if (!response.ok) {
-        throw new Error ("something went wrong");
-      }
-      const responseBody = await response.json();
+    // const fetchRequest =  async () =>{
+    //   const response = await fetch (
+    //    " https://randomuser.me/api/1.4?results=50"
+    //   );
+    //   if (!response.ok) {
+    //     throw new Error ("something went wrong");
+    //   }
+    //   const responseBody = await response.json();
 
-      const transformedData = [];
+    //   const transformedData = [];
 
-      for (const user of response.results){
+    //   for (const user of response.results){
         // transformedData.push ({
         //   id: user.login.uuid,
         // })
 
-      };
-      setData(transformedData);
-      setloading (false)
-
-      responseBody.map ((user)) ; {
-        transformedData.push ({
-          id: user.login.uuid,
-          name: '$[user.name.first] $[user.name.last]',
-          email: user.email,
-          phone: user.phone,
-          picture: user.picture.medium,
-        });
       
-      console.log(transformedData)
-  }
-  
-    
- 
 
 
 
@@ -119,9 +92,8 @@ const App = () => {
 
             <Route path="/Contact" element={<ContactUs />} />
 
-            <Route path="/Users" element={<Users />} >
-            <Route path="" element={<Users users={data} isLoading={isLoading}/>}/>
-            </Route>
+            <Route path="/Users" element={<Users />} />
+            
             <Route path="/Rooms" element={<Rooms />}>
               <Route path="room1" element={<Room1 />} />
             </Route>
@@ -132,6 +104,6 @@ const App = () => {
       </ErrorBoundary>
     </div>
   );
-};
+  }
 
 export default App;

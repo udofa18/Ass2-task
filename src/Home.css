@@ -23,3 +23,54 @@ hr{
 
 
 }
+.row{
+    padding: 50px;
+    display: flexbox;
+    align-content: center;
+    color: wheat;
+}
+
+.row li{
+    list-style: none;
+}
+
+.card{
+    border: 2px solid wheat;
+    padding: 10px;
+    width: 70%;
+    background-color: black;
+   margin: 0 auto;
+   display: flex;
+   
+}
+
+.card-body h5{
+    font-size: 28px;
+}
+.text-con{
+    margin-left: 50px;
+}
+.card img{
+    width: 30%;
+}
+.justify-content-between{
+    justify-content: space-evenly;
+
+}
+.d-flex {
+    display: flex;
+}
+.btn{
+    width: 30%;
+}
+.mt-3{
+margin: 0 auto;
+}
+.bg-success {
+    background-color: black;
+    color: white;
+    border: none;
+    margin: 5px;
+    padding: 10px;
+    
+}
